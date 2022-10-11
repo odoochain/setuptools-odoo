@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright © 2015-2021 ACSONE SA/NV
 # License LGPLv3 (http://www.gnu.org/licenses/lgpl-3.0-standalone.html)
 
@@ -505,7 +504,7 @@ def get_addon_setuptools_keywords(
 ):
     manifest = read_manifest(addon_dir)
     if precomputed_metadata_path and os.path.exists(precomputed_metadata_path):
-        with io.open(precomputed_metadata_path, encoding="utf-8") as fp:
+        with open(precomputed_metadata_path, encoding="utf-8") as fp:
             pkg_info = email.parser.HeaderParser().parse(fp)
             addon_name = _addon_name_from_metadata_name(pkg_info["Name"])
             version = pkg_info["Version"]

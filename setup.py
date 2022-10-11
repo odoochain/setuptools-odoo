@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright © 2015-2017 ACSONE SA/NV
 # License LGPLv3 (http://www.gnu.org/licenses/lgpl-3.0-standalone.html)
 
@@ -10,9 +9,9 @@ import setuptools
 here = os.path.abspath(os.path.dirname(__file__))
 
 long_description = []
-with io.open(os.path.join("README.rst"), encoding="utf-8") as f:
+with open(os.path.join("README.rst"), encoding="utf-8") as f:
     long_description.append(f.read())
-with io.open(os.path.join("CHANGES.rst"), encoding="utf-8") as f:
+with open(os.path.join("CHANGES.rst"), encoding="utf-8") as f:
     long_description.append(f.read())
 
 

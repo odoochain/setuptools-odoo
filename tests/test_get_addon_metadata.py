@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright © 2019 ACSONE SA/NV
 # License LGPLv3 (http://www.gnu.org/licenses/lgpl-3.0-standalone.html)
 
@@ -76,7 +75,7 @@ def test_pkg_info(tmp_path):
     addon_dir.mkdir()
     (addon_dir / "__manifest__.py").write_text(
         textwrap.dedent(
-            u"""\
+            """\
                 {
                     "name": "test addon",
                     "version": "12.0.1.0.0",
@@ -86,7 +85,7 @@ def test_pkg_info(tmp_path):
     )
     (addon_dir / "PKG-INFO").write_text(
         textwrap.dedent(
-            u"""\
+            """\
                 Name: odoo12-addon-test_addon
                 Version: 12.0.1.0.0.dev5
             """
@@ -106,7 +105,7 @@ def test_pkg_info_v15(tmp_path):
     addon_dir.mkdir()
     (addon_dir / "__manifest__.py").write_text(
         textwrap.dedent(
-            u"""\
+            """\
                 {
                     "name": "test addon",
                     "version": "15.0.1.0.0",
@@ -116,7 +115,7 @@ def test_pkg_info_v15(tmp_path):
     )
     (addon_dir / "PKG-INFO").write_text(
         textwrap.dedent(
-            u"""\
+            """\
                 Name: odoo-addon-test_addon
                 Version: 15.0.1.0.0.dev5
             """

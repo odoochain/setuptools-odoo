@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 # Copyright © 2020 ACSONE SA/NV
 # License LGPLv3 (http://www.gnu.org/licenses/lgpl-3.0-standalone.html)
 
-from __future__ import print_function
 
 import argparse
 import ast

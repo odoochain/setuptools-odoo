@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright © 2015-2018 ACSONE SA/NV
 # License LGPLv3 (http://www.gnu.org/licenses/lgpl-3.0-standalone.html)
 
@@ -214,14 +213,14 @@ def make_default_meta_package(addons_dir, name, odoo_version_override):
         os.mkdir(metapackage_dir)
 
     if os.path.exists(setup_py_file):
-        with open(setup_py_file, "r") as f:
+        with open(setup_py_file) as f:
             original_file_content = f.read()
     else:
         original_file_content = None
 
     if original_file_content is None or original_file_content != setup_py:
         if os.path.exists(version_txt_file):
-            with open(version_txt_file, "r") as f:
+            with open(version_txt_file) as f:
                 old_version = f.read().strip()
         else:
             old_version = None
