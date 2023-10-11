@@ -3,6 +3,79 @@ Changes
 
 .. towncrier release notes start
 
+3.2.1 (2023-09-30)
+------------------
+
+Bugfixes
+++++++++
+
+- Fix ``FileNotFoundError`` regression in ``setuptools-odoo-make-default``. (`#116 <https://github.com/acsone/setuptools-odoo/issues/116>`_)
+
+
+3.2.0 (2023-09-20)
+------------------
+
+Features
+++++++++
+
+- Generate python metadata version 2.1 instead 2.2. We are compatible with 2.1, and while
+  PyPI does not support 2.2 packages generated with such metadata can't be uploaded to
+  PyPI. (`#112 <https://github.com/acsone/setuptools-odoo/issues/112>`_)
+- Update core addon lists. (`#115 <https://github.com/acsone/setuptools-odoo/issues/115>`_)
+- Improve setuptools-odoo-make-default Windows compatibility. (`#114 <https://github.com/acsone/setuptools-odoo/issues/114>`_)
+
+Bugfixes
+++++++++
+
+- Open ``README.rst`` using utf-8 encoding to avoid decoding issues on platform
+  where the default encoding is not utf-8. (`#108 <https://github.com/acsone/setuptools-odoo/issues/108>`_)
+
+
+3.1.12 (2023-03-29)
+-------------------
+
+Features
+++++++++
+
+- Update core addon lists. (`#107 <https://github.com/acsone/setuptools-odoo/issues/107>`_)
+
+
+3.1.11 (2023-03-15)
+-------------------
+
+Features
+++++++++
+
+- Update core addon lists. (`#106 <https://github.com/acsone/setuptools-odoo/issues/106>`_)
+
+
+3.1.10 (2022-12-28)
+-------------------
+
+Features
+++++++++
+
+- Update core addon lists. (`#105 <https://github.com/acsone/setuptools-odoo/issues/105>`_)
+
+
+3.1.9 (2022-11-24)
+------------------
+
+Features
+++++++++
+
+- Update core addon lists. (`#100 <https://github.com/acsone/setuptools-odoo/issues/100>`_)
+
+
+3.1.8 (2022-11-01)
+------------------
+
+Features
+++++++++
+
+- Update core addon lists. (`#97 <https://github.com/acsone/setuptools-odoo/issues/97>`_)
+
+
 3.1.7 (2022-10-16)
 ------------------
 

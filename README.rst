@@ -12,6 +12,11 @@ setuptools-odoo
 .. image:: https://coveralls.io/repos/acsone/setuptools-odoo/badge.svg?branch=master&service=github
    :target: https://coveralls.io/github/acsone/setuptools-odoo?branch=master
 
+⚠️ This project is progressively being deprecated. Please consider using `whool
+<https://github.com/sbidoul/whool>`_ for packaging individual Odoo addons, and
+`hatch-odoo <https://github.com/acsone/hatch-odoo>`_ to build complete projects that
+include Odoo addons. ⚠️
+
 ``setuptools-odoo`` is a library to help packaging Odoo addons with setuptools.
 It mainly populates the usual ``setup.py`` keywords from the Odoo manifest files.
 
@@ -115,28 +120,26 @@ Odoo manifest file (``__manifest__.py`` or ``__openerp__.py``) and contain:
     and python libraries.
   * ``python_requires``
 
-Then, the addon can be deployed and packaged with usual ``setup.py``
-or ``pip`` commands such as:
+Then, the addon can be deployed and packaged with usual ``pip`` commands such as:
 
   .. code:: shell
 
-    python setup.py install
-    python setup.py develop
-    python setup.py bdist_wheel
     pip install odoo<8|9|10|11|12|13|14>-addon-<addon name>
+    pip install "git+https://github.com/OCA/<repo>#subdirectory=setup/<addon name>"
+    pip install "git+https://github.com/OCA/<repo>@<branch or reference>#subdirectory=setup/<addon name>"
     pip install -e .
-    pip install -e git+https://github.com/OCA/<repo>/<addon>#egg=odoo<8|9|10|11|12|13|14>-addon-<addon name>\&subdirectory=setup/<addon name>
+    pip wheel .
+    python -m build
 
 .. note::
 
-   When using pip to install from source, the `-e` option is important
-   because of `pip issue #3500 <https://github.com/pypa/pip/issues/3500>`_.
-   The `-e` option has the huge advantage of letting `pip freeze` produce
-   meaningful output.
+   Please make sure to use the latest pip version.
 
-When ``odoo-server-autodiscover`` is installed, The
-addons-path is automatically populated with all places providing
-odoo addons installed with this method.
+.. note::
+
+   When using Python 2 (Odoo 8, 9, 10), please install ``odoo-autodiscover>=2`` so the
+   addons-path is automatically populated with all places providing odoo addons
+   installed with this method.
 
 It is of course highly recommanded to run in a virtualenv.
 
